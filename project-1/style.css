@@ -1,26 +1,229 @@
 h1 {
+    display:inline-block;
     text-align: center;
     font-family: 'cirruscumulus';
     src: url('/font/cirruscumulus.regular.ttf');
-    font-size: 150px;
+    font-size: 20vw;
 }
 h2 {
     text-align: center;
     font-family: 'cirruscumulus';
     src: url('/font/cirruscumulus.regular.ttf');
-    font-size: 100px;
+    font-size: 15vw;
 }
 p {
     text-align: center;
-    font-family: 'isenheim';
-    src: url('/font/isenheim.regular.tff');
-    font-size: 50px;
+    font-family: 'joly-display';
+    src: url(https://use.typekit.net/ibr7psw.css);
+    font-size: 10vw;
+    line-height: 450px;
 }
-a:link {
+.yellowtext {
+    color: #FFA106;
+}
+.youthtext {
+    color: #EE2A7B;
+}
+.bluestar {
+    color: blue;
+    background-color:#0A0017;
+}
+.silverstar {
+    color: grey;
+    background-color:#0A0017;
+}
+.greenstar {
+    color: lime;
+    background-color:#0A0017;
+}
+.whitestar {
+    color: white;
+    background-color:#0A0017;
+}
+.yellowstar {
+    color: yellow;;
+    background-color:#0A0017;
+}
+.rainbowstar {
+    color: pink;
+    background-color:#0A0017;
+}
+.startext {
+    color: #B78BFF;
+    background-color:#0A0017;
+}
+.starbackground {
+    background-image: radial-gradient(#EDD0FF 20%, transparent 20%), radial-gradient(#E08BFF 20%, transparent 20%);
+    background-color: #0A0017;
+    background-position: 0 0, 50px 50px;
+    background-size: 100px 100px;
+}
+.daisytext {
+    color: #FFF200;
+    text-decoration: underline dotted white;
+}
+.stonetext {
+    color:#00A79D;
+}
+.stone {
+    font-size:40vw;
+}
+.linetext {
+    color: #58595B;
+}
+.winktext {
+    color: #FF62C2;
+}
+.windtext {
+    color: #F5FBFB;
+}
+a {
     text-decoration: none;
-    color: black;
+    color: inherit;
+    font-style: italic;
+    transition: filter 0.3s ease;
 }
-hr {
-    border-top: 2px dashed;
-    background-color: none;
+a:hover {
+    filter: blur(5px);
+  }
+.runningmatter {
+    text-align:center;
+    width: 100%;
+    height: 105%;
+    background-color: #FFDF23;
+    position:sticky;
+    top: 0;
+}
+.runningtext {
+    font-size: 5vw;
+    line-height: 100px;
+    font-family: 'cirruscumulus';
+    src: url('/font/cirruscumulus.regular.ttf');
+    width: 100%;
+    color:  #FFA106;
+}
+.runningtext2 {
+    font-size: 5vw;
+    line-height: 100px;
+    font-family: 'cirruscumulus';
+    src: url('/font/cirruscumulus.regular.ttf');
+    width: 100%;
+    color: #DA1C5C;
+}
+.runningmatter2 {
+    text-align:center;
+    width: 100%;
+    height: 105%;
+    background-color: #F64E9F;
+    position:sticky;
+    top: 0;
+}
+.runningtext3 {
+    font-size: 5vw;
+    line-height: 100px;
+    font-family: 'cirruscumulus';
+    src: url('/font/cirruscumulus.regular.ttf');
+    width: 100%;
+    color: #B78BFF;
+}
+.runningmatter3 {
+    text-align:center;
+    width: 100%;
+    height: 105%;
+    background-color: #290045;
+    position:sticky;
+    top: 0;
+}
+.runningtext4 {
+    font-size: 5vw;
+    line-height: 100px;
+    font-family: 'cirruscumulus';
+    src: url('/font/cirruscumulus.regular.ttf');
+    width: 100%;
+    color: #39D424;
+}
+.runningmatter4 {
+    text-align:center;
+    width: 100%;
+    height: 105%;
+    background-color: #FFF200;
+    position:sticky;
+    top: 0;
+}
+.runningtext5 {
+    font-size: 5vw;
+    line-height: 100px;
+    font-family: 'cirruscumulus';
+    src: url('/font/cirruscumulus.regular.ttf');
+    width: 100%;
+    color: #00A79D;
+}
+.runningmatter5 {
+    text-align:center;
+    width: 100%;
+    height: 105%;
+    background-color: #CCEDEB;
+    position:sticky;
+    top: 0;
+}
+.runningtext6 {
+    display: inline-block;
+    font-size: 5vw;
+    line-height: 100px;
+    font-family: 'cirruscumulus';
+    src: url('/font/cirruscumulus.regular.ttf');
+    width: 100%;
+    color: #6D6E71;
+}
+.runningmatter6 {
+    text-align:center;
+    width: 100%;
+    height: 105%;
+    background-color: #EDEEF2;
+    position:sticky;
+    top: 0;
+}
+.runningtext7 {
+    font-size: 5vw;
+    line-height: 100px;
+    font-family: 'cirruscumulus';
+    src: url('/font/cirruscumulus.regular.ttf');
+    width: 100%;
+    color: #FF81CE;
+}
+.runningmatter7 {
+    text-align:center;
+    width: 100%;
+    height: 105%;
+    background-color: #FFC0E7;
+    position:sticky;
+    top: 0;
+}
+.runningtext8 {
+    font-size: 5vw;
+    line-height: 100px;
+    font-family: 'cirruscumulus';
+    src: url('/font/cirruscumulus.regular.ttf');
+    width: 100%;
+    color: #A6DDE7;
+}
+.runningmatter8 {
+    text-align:center;
+    width: 100%;
+    height: 105%;
+    background-color: #EBF8F7;
+    position:sticky;
+    top: 0; 
+}
+.linebackground {
+    background: repeating-linear-gradient(
+        45deg,
+        #A7A9AC,
+        #444 10px,
+        #444 10px,
+        #444 11px
+    )
+}
+.homepage {
+    color: #FFFFFF;
 }
