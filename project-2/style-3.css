@@ -1,0 +1,126 @@
+/* Version 1: Poster Shape */
+.polkadots {
+    display:inline-block;
+    width:100vw;
+    height:1000px;
+    background-image: repeating-linear-gradient(45deg, #d50796, #d50796 10px, transparent 10px, transparent 20px);
+}
+.plaid {
+    background-color: #ffffff;
+    width: 100vw;
+    background-image: linear-gradient(90deg, red 40px, transparent 40px), linear-gradient(yellow 40px, transparent 40px);
+    background-position: 10px 10px;
+    background-size: 80px 80px;
+    position: relative;
+}
+.textBox {
+  width: 100vw;
+  height: 500px;
+  font-size: 500px;
+  font-family: "neue-haas-grotesk-display", sans-serif;
+  src: "https://use.typekit.net/iuy0lkn.css";
+  color: #ff0095;
+  line-height: 500px;
+  overflow:hidden;
+  transition: filter 10s ease;
+  position: absolute;
+}
+.textBox:hover {
+    filter:blur(100px);
+}
+.textBox span {
+  position: absolute;
+  white-space: nowrap;
+  transform: translateX(0);
+  transition: 120s;
+}
+.textBox:hover span {
+  transform: translateX(calc(200px - 100%));
+}
+.logo {
+  width: 100vw;
+  height: 120vh;
+  position: absolute;
+  top: 30px;
+  left: 5px;
+  z-index: 10;
+}
+.gif-image {
+  width: 10vw;  
+  height: 120vh;
+  transition: all 0.3s ease; 
+  position:absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 10;
+}
+.gif-image:hover {
+  content: url('images/fruits.gif'); 
+}
+.apple-images {
+  position: relative;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 500px;
+  z-index:5;
+}
+.apple-images img {
+  width: 50px;
+  height:400px;
+}
+@keyframes shake {
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-10px);
+  }
+  50% {
+    transform: translateX(10px);
+  }
+  75% {
+    transform: translateX(-10px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+.apple-images img:hover {
+  animation: shake 0.5s ease-in-out;
+}
+a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+}
+.apple-link img:hover {
+  animation: shake 0.5s ease-in-out;
+}
+a img { 
+  width: 200px;
+  height: 200px;
+}
+.dots {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-color: black;
+    margin:0;
+    background-image: radial-gradient(circle, #ffffff 12.5px, transparent 12.5px), radial-gradient(circle, #ffffff 12.5px, transparent 12.5px), radial-gradient(circle, #ffffff 12.5px, transparent 12.5px), radial-gradient(circle, #ffffff 12.5px, transparent 12.5px);
+    background-position: 0 0, 45px 0, 22.5px 45px, 67.5px 45px;
+    background-size: 90px 90px;
+}
+.logo2 {
+  display:none;
+}
+body {
+    cursor: url('images/cherry.png'), auto;
+  }
