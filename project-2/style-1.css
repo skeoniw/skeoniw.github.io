@@ -1,26 +1,119 @@
 /* Version 1: Poster Shape */
+.plaid {
+  background-color: #ffffff;
+  width: 100vw;
+  height: 100vh;
+  background-image: linear-gradient(90deg, #d7a00880 40px, transparent 40px), linear-gradient(#d7a00880 40px, transparent 40px);
+  background-size: 80px 80px;
+  position: relative;
+}
+.plaid.hovered {
+  background-image: linear-gradient(90deg, #0769d580  40px, transparent 40px), linear-gradient(#0769d580 40px, transparent 40px);
+  position: relative;
+  background-size: 80px 80px;
+  background-color: #ffffff;
+  width: 100vw;
+  height: 100vh;
+}
 .polkadots {
-    display:inline-block;
     width:100vw;
-    height:1000px;
+    height: 100vh;
     background-color: #ff0095;
-    margin:0;
     background-image: radial-gradient(circle, #ffffff 12.5px, transparent 12.5px), radial-gradient(circle, #ffffff 12.5px, transparent 12.5px), radial-gradient(circle, #ffffff 12.5px, transparent 12.5px), radial-gradient(circle, #ffffff 12.5px, transparent 12.5px);
     background-position: 0 0, 45px 0, 22.5px 45px, 67.5px 45px;
     background-size: 90px 90px;
-}
-.plaid {
-    background-color: #ffffff;
-    width: 100vw;
-    background-image: linear-gradient(90deg, #d7a00880 40px, transparent 40px), linear-gradient(#d7a00880 40px, transparent 40px);
-    background-position: 10px 10px;
-    background-size: 80px 80px;
     position: relative;
+    z-index: 5;
+}
+.fruitstand { 
+  width: 100vw;
+  height: 10vh;
+  overflow: hidden;
+  position: relative;
+  display:flex; 
+  background-color: white;
+  margin-bottom: 10px;
+}
+.fruitstand span {
+  font-family: "playwrite-cc-cu", sans-serif;
+  src: "https://use.typekit.net/iuy0lkn.css"; 
+  font-size: 3vh;
+  font-style: bold;
+  color: #ff0095;
+  position: absolute;
+  top: 25px;
+  white-space: nowrap; 
+  z-index: 20; 
+  animation: scrollText 10s linear infinite; 
+}
+@keyframes scrollText {
+  0% {
+    transform: translateX(100vw); 
+  }
+  100% {
+    transform: translateX(-100vw); 
+  }
+}
+.advertisement {
+  position: relative;
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  height: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 50vh;
+  left: 0;
+  transition: transform 1s ease;
+}
+.advertisement:hover span {
+  transform:translateY(-50%) rotate(360deg);
+}
+.advertisement span {
+  font-size: 10vh;
+  font-family: "neue-haas-grotesk-display", sans-serif;
+  src: "https://use.typekit.net/iuy0lkn.css";
+  color: #FED000;
+  background-color: #ff0095;
+  outline: 10px solid white;
+  transform-origin: center center; 
+  top: 0;
+  transition: transform 1s ease;
+}
+.fruitsmag {
+ transform: rotate(45deg);
+}
+.june1997 {
+ transform: rotate(25deg);
+}
+.issue {
+ transform: rotate(-15deg);
+}
+.outnow {
+  transform: rotate(-40deg);
+}
+.style {
+  transform: rotate(60deg);
+}
+.gif-image {
+  position: absolute;
+  width: 50vw;  
+  height: 100vh;
+  top: 82px;
+  right: 0;
+  border: 10px solid white; 
+  transition: all 0.3s ease; 
+  z-index: 5;
+}
+.gif-image:hover {
+  content: url('images/fruits.gif'); 
 }
 .textBox {
   width: 100vw;
-  height: 500px;
-  font-size: 500px;
+  height: 100vh;
+  font-size: 100vh;
   font-family: "neue-haas-grotesk-display", sans-serif;
   src: "https://use.typekit.net/iuy0lkn.css";
   color: #ff0095;
@@ -37,28 +130,6 @@
 .textBox:hover span {
   transform: translateX(calc(200px - 100%));
 }
-.logo {
-  width: 40vw;
-  height: 120vh;
-  position: absolute;
-  top: 30px;
-  left: 5px;
-  z-index: 10;
-}
-.gif-image {
-  width: 50vw;  
-  height: 120vh;
-  border: 10px solid white; 
-  border-radius: 5%;
-  transition: all 0.3s ease; 
-  position:absolute;
-  top: 20px;
-  right: 20px;
-  z-index: 10;
-}
-.gif-image:hover {
-  content: url('images/fruits.gif'); 
-}
 .apple-images {
   position: relative;
   bottom: 0;
@@ -71,8 +142,8 @@
   z-index:5;
 }
 .apple-images img {
-  width: 400px;
-  height:400px;
+  width: 50vw;
+  height:50vh;
 }
 @keyframes shake {
   0% {
@@ -120,9 +191,7 @@ a img {
     background-position: 0 0, 45px 0, 22.5px 45px, 67.5px 45px;
     background-size: 90px 90px;
 }
-.logo2 {
-  display: none;
-}
+
 body {
   cursor: url('images/cherry.png'), auto;
 }

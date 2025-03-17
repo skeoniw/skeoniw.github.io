@@ -3,21 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FRUITS1</title>
+    <title>FRUITSMAGAZINE</title>
     <link rel="stylesheet" href="https://use.typekit.net/iuy0lkn.css">
     <link rel="stylesheet" href="style-1.css">
 </head>
 <body class="plaid">
-    <div class="polkadots"></div>
+
+    <div class="fruitstand">
+        <span>SELLING FRUiT IN A SMALL B☺X IN T☺KY☺ </span>
+    </div>
+
+    <div class="polkadots">    
+    <div class="advertisement">
+        <span class="fruitsmag"> FRUiTS MAGAZINE </span> <br>
+        <span class="june1997"> JUNE 1997 </span> <br>
+        <span class="issue"> ISSUE </span> <br> 
+        <span class="outnow"> OUT NOW </span> <br> 
+        <span class="style"> WHAT'S YOUR STYLE? </span>
+
+    </div>
+</div>   
 
     <div class="textBox"><span>Fruits (stylized as FRUiTS) was a Japanese monthly street fashion magazine founded in 1997 by photographer Shoichi Aoki. Though Fruits covered styles found throughout Tokyo, it is associated most closely with the fashion subcultures found in Tokyo's Harajuku district. The magazine primarily focused on individual styles found outside the fashion-industry mainstream, as well as subcultures specific to Japan, such as lolita and ganguro, and local interpretations of larger subcultures like punk and goth. Fruits featured a simple layout, with the bulk of the magazine made up of single full-page photographs accompanied by a brief profile of the photographed person, which included their age, occupation, and a description of what brands they were wearing (if applicable), as well as their self-described "point of fashion" (style inspiration). Most issues included only a couple of advertisements, and typically only for local businesses. Occasional special-edition issues of Fruits also included more extensive profiles of frequently photographed people, or reader-created artwork. After nearly 20 years and 233 issues, Aoki announced in February 2017 that Fruits magazine would cease publication effective immediately because "there are no more cool kids to photograph".
-    </span></div>
-
-
-    <img class="logo" src="images/logo.webp">
-    <img class="logo2" src="images/logo2.png">
-
-   
+    </span></div> 
 
     <img class="gif-image" src="images/fruits-still.png" alt="Fruits Magazine">
 
@@ -26,5 +34,23 @@
     <img src="images/apple2.png">
     <img src="images/apple3.png">
 </div>
+<!--to be transparent, i used chatgpt to do the javascript. i don't understand how it works at all but made my website with the vision that the apples would change the background color like changing clothes buttttt doing it with css was hard because in order to make the apples affect the plaid they had to be siblings i think? but plaid is body so they can't be siblings. so i cheated. i admit it. im a dirty cheater. but isn't it ... cool ...? -->
+<script>
+    const appleImages = document.querySelector('.apple-images');
+const plaid = document.querySelector('.plaid');
+
+// Track the toggle state
+let isHovered = false;
+
+appleImages.addEventListener('mouseenter', function() {
+  if (isHovered) {
+    plaid.classList.remove('hovered');  
+  } else {
+    plaid.classList.add('hovered');  
+  }
+  isHovered = !isHovered; 
+});
+  </script>
+</body>
 </body>
 </html>
