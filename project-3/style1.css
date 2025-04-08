@@ -13,6 +13,7 @@ h1 {
     word-wrap: break-word;
     overflow-wrap: break-word;
     width: 100vw;
+    transition: ease-in-out 1s; 
 }
 #secret {
     display:fixed;
@@ -24,4 +25,7 @@ h1 {
     font-style: italic; 
     font-size: 4vw;
     height: auto; 
+}
+.hover:hover {
+    filter: blur(10px);
 }
