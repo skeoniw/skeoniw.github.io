@@ -14,12 +14,11 @@ body {
 
 .gif-image {
   width: 50vw;
-  height: 20vh;
+  height: auto;
   transition: all 0.3s ease;
   z-index: 5;
   border: solid white 2px;
   top: 20px;
-  filter: blur(2px)
 }
 
 .gif-image:hover {
@@ -28,7 +27,7 @@ body {
 
 ul {
   font-family: 'Times New Roman', Times, serif;
-  color: white;
+  color:#89d5d2;
   font-style: italic;
   font-size: 5vw;
   list-style: none;
@@ -43,7 +42,7 @@ ul li {
 
 ul li a {
   text-decoration: none;
-  color: white;
+  color: #89d5d2;
   opacity: 100%;
   transition: filter 3s ease-in-out;
 }
