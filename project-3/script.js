@@ -11,6 +11,7 @@ let responses = [
     "okkkayyyy no judging", 
     "ur lucky im not a judge",
     "i know i asked but like...",
+    "have u tried betterhelp?",
 ];
 
 let shh = JSON.parse(localStorage.getItem("userResponses")) || [];
