@@ -5,6 +5,9 @@ html, body {
     padding: 0;
     overflow-x: hidden;
     overflow-y: scroll;
+    cursor: help;
+    transition: background-color 0.3s ease;
+
 }
 h1 {
     font-family: "joly-display", sans-serif;
@@ -14,6 +17,9 @@ h1 {
     overflow-wrap: break-word;
     width: 100vw;
     transition: ease-in-out 1s; 
+}
+h1:hover {
+    filter: blur(10px);
 }
 #secret {
     display:fixed;
@@ -25,7 +31,17 @@ h1 {
     font-style: italic; 
     font-size: 4vw;
     height: auto; 
+    border:none;
+    background-color: transparent;
 }
-.hover:hover {
-    filter: blur(10px);
-}
+#gradient-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    background: radial-gradient(circle at center, rgba(0, 123, 255, 0.4) 0%, transparent 40%);
+    mix-blend-mode: screen;
+    filter: blur(40px); 
+  }

@@ -5,23 +5,75 @@ let responses = [
     "don't be mad, but i'm absolutely telling everyone this. it's funny.",
     "weird, dude.",
     "and you've kept that to yourself for how long?",
+    "idk if i can trust u anymore...",
+    "that's ... new",
+    "yikes",
+    "okkkayyyy no judging", 
+    "ur lucky im not a judge",
+    "i know i asked but like...",
 ];
 
-//i cross-referenced some coding sites for this, lmk if there's a better way of doing this! hi nikkiiiiiiiiiiiii
+let shh = JSON.parse(localStorage.getItem("userResponses")) || [];
+
+function storeResponse(response) {
+    shh.push(response);
+    localStorage.setItem("userResponses", JSON.stringify(shh));
+}
+
+function displayShh() {
+    let header = document.getElementById("header");
+    if (shh.length > 0) {
+        header.innerHTML = shh.join("<br>");
+    } else {
+        header.textContent = " ";
+    }
+}
 
 function tell() {
-    let userInput = document.getElementById("secret").value;
-    document.getElementById("header").textContent = userInput || "tell me a secret"; 
+    let inputField = document.getElementById("secret");
+    let userInput = inputField.value.trim();
+
+    if (userInput.toLowerCase() === "secret") {
+        displayShh();
+    } else {
+        document.getElementById("header").textContent = userInput || "tell me a secret";
+    }
 }
 
 document.getElementById("secret").addEventListener("keydown", function(event) {
     if (event.key === "Enter") {
-        event.preventDefault(); 
+        event.preventDefault();
 
-        let randomResponse = responses[Math.floor(Math.random() * responses.length)]; 
+        let inputField = document.getElementById("secret");
+        let userInput = inputField.value.trim();
 
-        document.getElementById("header").textContent = randomResponse; 
-
-        document.getElementById("secret").value = ""; 
+        if (userInput !== "") {
+            if (userInput.toLowerCase() !== "secret") {
+                let randomResponse = responses[Math.floor(Math.random() * responses.length)];
+                document.getElementById("header").textContent = randomResponse;
+                storeResponse(userInput);
+            }
+            inputField.value = "";
+            document.getElementById("header").textContent = "tell me a secret";
+        }
     }
+});
+
+let gradient = document.getElementById('gradient-overlay');
+
+let mouseX = window.innerWidth / 2;
+let mouseY = window.innerHeight / 2;
+let fixedRadius = 150; 
+
+document.addEventListener('mousemove', (e) => {
+  mouseX = e.clientX;
+  mouseY = e.clientY;
+  gradient.style.background = 'radial-gradient(circle ' + fixedRadius + 'px at ' + mouseX + 'px ' + mouseY + 'px, rgba(0, 123, 255, 0.4) 0%, transparent 60%)';
+});
+
+let isCyan = false;
+
+document.addEventListener("keydown", () => {
+    document.body.style.backgroundColor = isCyan ? "white" : "#66c7ffd9";
+    isCyan = !isCyan;
 });
