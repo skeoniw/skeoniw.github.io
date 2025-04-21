@@ -5,11 +5,7 @@ body {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  background-color: #89d5d2; 
-    margin:0;
-    background-image: radial-gradient(circle, #ffffff 12.5px, transparent 12.5px), radial-gradient(circle, #ffffff 12.5px, transparent 12.5px), radial-gradient(circle, #ffffff 12.5px, transparent 12.5px), radial-gradient(circle, #ffffff 12.5px, transparent 12.5px);
-    background-position: 0 0, 45px 0, 22.5px 45px, 67.5px 45px;
-    background-size: 90px 90px;
+  background-color: white; 
 }
 
 .content {
