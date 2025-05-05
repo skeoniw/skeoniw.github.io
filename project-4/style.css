@@ -1,0 +1,76 @@
+.moon {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-color: blue;
+    display: inline-block;
+    vertical-align: middle;
+    transition: 1s ease-in-out;
+}
+.sun {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-color: yellow;
+    display: inline-block;
+    vertical-align: middle;
+}
+h1 {
+    display: inline-block;
+    font-size: 200px;
+    line-height: 200px;
+}
+.new-moon {
+    width: 200px;
+    height: 200px;
+    background-color: blue;
+    opacity: 0%;
+}
+.first-quarter {
+    background-color: blue;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    clip-path: inset(0 50% 0 0);
+}
+.waxing-gibbous {
+    background-color: blue;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    clip-path: inset(0 25% 0 0);
+}
+.full-moon {
+    background-color: blue;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+}
+.waning-gibbous {
+    background-color: blue;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    clip-path: inset(0 25% 0 0);
+}
+.third-quarter {
+    background-color: blue;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    clip-path: inset(0 50% 0 0);
+}
+.waning-crescent {
+    background-color: blue;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    clip-path: inset(0 50% 0 0);
+}
+.waxing-crescent {
+    background-color: blue;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    clip-path: inset(0 50% 0 0);
+}
