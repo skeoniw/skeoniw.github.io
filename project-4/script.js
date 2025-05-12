@@ -28,3 +28,39 @@ function moonAppearance(){
 } 
 setInterval(moonAppearance, 1000);
 document.addEventListener('DOMContentLoaded', moonAppearance); 
+
+function getTimeToNextPhase() {
+    let phaseDuration = 7.4 * 24 * 60 * 60 * 1000; 
+    let newMoonDate = new Date('2025-04-27');
+    let now = new Date();
+    let timeElapsed = now - newMoonDate;
+    let timeInCycle = timeElapsed % (29.5 * 24 * 60 * 60 * 1000);
+    let phaseElapsed = timeInCycle % phaseDuration;
+    let untilNextPhase = phaseDuration - phaseElapsed;
+
+    return untilNextPhase;
+}
+
+function updateCountdown() {
+    let countdown = document.getElementById('countdown');
+    let ms = getTimeToNextPhase();
+
+    let seconds = Math.floor((ms / 1000) % 60);
+    let minutes = Math.floor((ms / (1000 * 60)) % 60);
+    let hours = Math.floor((ms / (1000 * 60 * 60)) % 24);
+    let days = Math.floor(ms / (1000 * 60 * 60 * 24));
+
+    countdown.textContent = 'time until next phase: ' + days + 'd ' + hours + 'h ' + minutes + 'm ' + seconds + 's';
+}
+
+setInterval(updateCountdown, 1000);
+document.addEventListener('DOMContentLoaded', updateCountdown);
+
+function showCurrentPhase() {
+    let phaseText = moonPhase();
+    let phasePhase = document.getElementById('current-phase');
+    phasePhase.textContent = 'tonight, there is a ' + phaseText;
+}
+
+setInterval(showCurrentPhase, 1000);
+document.addEventListener('DOMContentLoaded', showCurrentPhase);

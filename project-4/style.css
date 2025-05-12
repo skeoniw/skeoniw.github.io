@@ -1,76 +1,127 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow-x: hidden; 
+    overflow-y: hidden;
+    cursor: zoom-in;
+}
+.moon-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh; 
+    box-sizing: border-box;
+    flex-wrap: nowrap; 
+    position: relative;
+    right: 150px;
+}
+.moon-text > * {
+    transition: transform 2s ease-in-out; 
+}
+
+.moon-text > *:hover {
+    transform: rotate(360deg); 
+}
 .moon {
-    width: 200px;
-    height: 200px;
+    width: 275px;
+    height: 275px;
     border-radius: 50%;
-    background-color: blue;
-    display: inline-block;
-    vertical-align: middle;
+    position: relative; 
+    top: 50px;
+    background-color: #d7f1ff;
     transition: 1s ease-in-out;
 }
-.sun {
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-    background-color: yellow;
-    display: inline-block;
-    vertical-align: middle;
-}
 h1 {
+    font-family: "helvetica-lt-pro", sans-serif;
+    src: "https://use.typekit.net/nau5dvg.css";
     display: inline-block;
-    font-size: 200px;
-    line-height: 200px;
+    font-size: 450px;
+    font-weight: 300;
+    flex: 0 0 auto;
+    text-align: center;
+    line-height: 1;
+    margin: 0;
+    color: #003141;
+}
+h2 {
+    font-family: "helvetica-lt-pro", sans-serif;
+    src: "https://use.typekit.net/nau5dvg.css";
+    font-weight: 300;
+    position: relative;
+    text-align: center;
+    white-space: nowrap;
+    display: inline-block;
+    left: 340px;
+    font-size: 67px;
+    top: -125px;
+    color: #003141;
+}
+p {
+    font-family: "helvetica-lt-pro", sans-serif;
+    src: "https://use.typekit.net/nau5dvg.css";
+    position: relative;
+    left: 185px;
+    font-size: 20px;
+    bottom: 230px;
+    line-height: 5px;
+    color: #003141;
 }
 .new-moon {
-    width: 200px;
-    height: 200px;
-    background-color: blue;
+    width: 275px;
+    height: 275px;
+    background-color: #d7f1ff;
     opacity: 0%;
 }
 .first-quarter {
-    background-color: blue;
-    width: 200px;
-    height: 200px;
+    background-color: #d7f1ff;
+    width: 275px;
+    height: 275px;
     border-radius: 50%;
     clip-path: inset(0 50% 0 0);
 }
 .waxing-gibbous {
-    background-color: blue;
-    width: 200px;
-    height: 200px;
+    background-color: #d7f1ff;
+    width: 275px;
+    height: 275px;
     border-radius: 50%;
     clip-path: inset(0 25% 0 0);
 }
 .full-moon {
-    background-color: blue;
-    width: 200px;
-    height: 200px;
+    background-color: #d7f1ff;
+    width: 275px;
+    height: 275px;
     border-radius: 50%;
 }
 .waning-gibbous {
-    background-color: blue;
-    width: 200px;
-    height: 200px;
+    background-color: #d7f1ff;
+    width: 275px;
+    height: 275px;
     border-radius: 50%;
     clip-path: inset(0 25% 0 0);
 }
 .third-quarter {
-    background-color: blue;
-    width: 200px;
-    height: 200px;
+    background-color: #d7f1ff;
+    width: 275px;
+    height: 275px;
     border-radius: 50%;
     clip-path: inset(0 50% 0 0);
 }
 .waning-crescent {
-    background-color: blue;
-    width: 200px;
-    height: 200px;
+    background-color: #d7f1ff;
+    width: 275px;
+    height: 275px;
     border-radius: 50%;
     clip-path: inset(0 50% 0 0);
 }
 .waxing-crescent {
-    background-color: blue;
-    width: 200px;
-    height: 200px;
+    background-color: #d7f1ff;
+    width: 275px;
+    height: 275px;
     border-radius: 50%;
     clip-path: inset(0 50% 0 0);
+}
+#current-phase {
+    font-size: 21.75px;
 }
